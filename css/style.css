@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+
+#center{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main {
+    max-width: 1080px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+
+/*button start*/
+.btn{
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn::before{
+    content: '';
+    position: absolute;
+    background: #f2f2f245;
+    left: -10px;
+    width: 10px;
+    top: 0;
+    bottom: 0;
+  }
+
+  .btn:hover::before{
+    left: calc(100% + 10px);
+    transition: left 500ms;
+  }
+
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 20px 10px 40px;
+    border: 2px solid #000;
+    color: #fff;
+    background-color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  .button i {
+    position: absolute;
+    left: 15px;
+    font-size: 20px;
+    color: #fff;
+  }
+/*button end*/
+
+
+/*whats start */
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    text-decoration: none;
+    transition: transform 0.2s ease-out;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .floating-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .message {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(10px);
+    z-index: 9998;
+  }
+  
+  .floating-btn:hover + .message {
+    display: block;
+    animation-name: message-appear;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes message-appear {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  .fa-commenting-o{
+    font-size: 1.5rem;
+  }
+
+  @media  screen and (max-width:480px){
+    #whats{
+        display: none;
+    }
+  }
+/*whats end*/
+
+
+.pages p{
+  margin-top: 4rem;
+}
+
+
+.errorpage {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.errorpage h1 {
+  font-size: 3em;
+  margin-top: 3em;
+}
+
+.errorpage p {
+  font-size: 1.5em;
+  margin-top: 2em;
+}
+
+.errorpage a {
+  display: block;
+  margin-top: 2em;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #000;
+}
+
+.errorpage a span:hover {
+  border-bottom: 2px solid #000;
+}
+
